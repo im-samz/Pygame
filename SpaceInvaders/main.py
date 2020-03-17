@@ -1,4 +1,4 @@
-# Use pygame library
+# Import necessary libraries
 import pygame
 import random
 import math
