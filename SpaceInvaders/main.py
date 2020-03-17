@@ -185,24 +185,3 @@ while running:
     player(playerX, playerY)  # increase values and re-frame the image.
     show_score(textX, textY)
     pygame.display.update()  # Always update variables
-
-# 1. Initialize pygame
-# 2. Create a window and an event loop
-# 3. Customize the window
-# 4. Add in the player: first upload photo and starting co-ords
-# 5. Call the player method within the loop so that it always appears. After fill so that it is layer over screen
-# 6. Give the player function parameters so you can increase or decrease its value
-# 7. To move objects with keys, create an event. Put it in the event loop so that it checks for input on every frame.
-# 7.5 You need to first specify if key is pressed, then check the type. Then check once it is released. Create a change variable the re-iterates positions
-# 8. Create an enemy char. Use bounded random integers for respawning.
-# 9. Add enemy movement. since in while loop already, whenever the enemy is within bounds, the co-ords change.
-# 10. After adding background, while loop is slower, so the objects move small increments every so often. Increase speed
-# 11. Create framework for fire function
-# 12. Within events, make a condition for when space is pressed. Then pass in the coords of the spaceship.
-# 13. However, this just makes the bullet appear; it doesn't propagate through the frame. Since we changed the state, we can make a conditional within the loop that checks a
-#     bullet state and keeps calling the function (problem because it uses the new playerX value every call, and the state never changes back to ready, so we can't call fire again.
-
-# How to respawn? Just overwrite enemy X enemyY again.
-# decrease enemy spawn location because if it spans at 800, it is past the border and will float down automatically
-
-# Creating multiple enemies. We will make a list of enemy elements of a preset size. We will fill that list. Thus, whenever we want to check on the state of the enemies, we need to go iterate through the list.
