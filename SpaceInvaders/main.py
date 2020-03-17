@@ -83,9 +83,9 @@ def enemy(x, y, i):
     window.blit(enemyIMG[i], (x, y))
 
 def firebullet(x, y):
-    global bullet_state  # so we can use this variable in the function
+    global bullet_state  # So we can use this variable in the function
     bullet_state = "fire"
-    window.blit(bulletIMG, (x + 16, y + 10))  # so that the bullet is at the centre of our ship
+    window.blit(bulletIMG, (x + 16, y + 10))  # So that the bullet is at the centre of our ship
 
 
 # Finding the collion by calculating the distance between bullet and enemy
@@ -150,7 +150,7 @@ while running:
         enemyX[i] += enemyX_change[i]
         if enemyX[i] <= 0:
             enemyX_change[i] = 6
-            enemyY[i] += enemyY_change[i]  # decrease by constant amount
+            enemyY[i] += enemyY_change[i]  # Decrease by constant amount
         elif enemyX[i] >= 736:
             enemyX_change[i] = -6
             enemyY[i] += enemyY_change[i]
@@ -179,6 +179,6 @@ while running:
         firebullet(bulletX, bulletY)
         bulletY -= bulletY_change
 
-    player(playerX, playerY)  # Icrease values and re-frame the image.
+    player(playerX, playerY)  # Increase values and re-frame the image.
     show_score(textX, textY)
     pygame.display.update()  # Always update variables
